@@ -78,7 +78,6 @@ button{
 <body>
 
 <div class="card">
-  <!-- Put photo.jpg in same folder -->
   <img src="photo.jpeg" alt="Us 💕" class="photo">
 
   <h1>Sheeba, will you be my Valentine? 💖🐱💞</h1>
@@ -94,9 +93,7 @@ button{
   </div>
 </div>
 
-<!-- MUSIC -->
 <audio id="bgMusic" loop>
-  <!-- Rename your cute song to bgm.mp3 -->
   <source src="bgm.mp4" type="audio/mpeg">
 </audio>
 
@@ -107,7 +104,8 @@ const result=document.getElementById("result");
 const music=document.getElementById("bgMusic");
 const musicBtn=document.getElementById("musicBtn");
 
-const confettiInstance=confetti.create(document.body,{resize:true});
+/* FIXED LINE */
+const confettiInstance = confetti;
 
 musicBtn.addEventListener("click",()=>{
   if(music.paused){
